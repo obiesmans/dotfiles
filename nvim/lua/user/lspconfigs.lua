@@ -85,6 +85,12 @@ require 'lspconfig'.terraformls.setup {
 	capabilities = capabilities,
 }
 
+-- bash-language-server
+require 'lspconfig'.bashls.setup {
+	flags = lsp_flags,
+	capabilities = capabilities,
+}
+
 --require('lspconfig')['pyright'].setup{
 --    on_attach = on_attach,
 --    flags = lsp_flags,
