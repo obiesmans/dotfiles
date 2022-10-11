@@ -15,6 +15,7 @@ require('user.lspconfigs')
 require('user.cmp')
 require('user.trouble')
 require('user.identblankline')
+require('user.whichkey')
 
 
 -- satusline
