@@ -1,4 +1,4 @@
-require('plugins')
+require('packages')
 
 
 vim.opt.clipboard = "unnamed,unnamedplus"
@@ -9,20 +9,7 @@ vim.opt.cursorlineopt = "number"
 vim.opt.cursorline = true
 
 
-require('user.dracula')
-require('user.treesitter')
-require('user.lspconfigs')
-require('user.cmp')
-require('user.trouble')
-require('user.identblankline')
-require('user.whichkey')
-
-
--- satusline
-require('user.lualine')
-
--- NvimTree
-require('user.nvimtree')
+require('plugins')
 
 -- Improve default signs for LSP Diagnostics
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }

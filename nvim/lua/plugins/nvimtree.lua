@@ -1,6 +1,15 @@
-require("nvim-tree").setup()
-
 local wk = require("which-key")
+
+local function on_attach_tree()
+	wk.register({
+		O = { "IT WORKS" }
+	})
+end
+
+require("nvim-tree").setup {
+	on_attach = on_attach_tree
+}
+
 wk.register({
 	t = {
 		name = "Tree",
@@ -16,4 +25,6 @@ wk.register({
 }, {
 	prefix = "<leader>",
 })
+
+
 -- vim.api.nvim_set_keymap('n', '<leader>tt', ':NvimTreeToggle<CR>', {noremap = true})
