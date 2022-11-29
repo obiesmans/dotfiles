@@ -13,7 +13,7 @@ gs.setup {
 			{
 				g = {
 					name = 'git',
-					d = { '<cmd>Gitsigns diffthis', 'diff against git index' },
+					d = { '<cmd>Gitsigns diffthis<cr>', 'diff against git index' },
 					b = {
 						name = 'buffer',
 						s = { "<cmd>Gitsigns stage_buffer<cr>", "stage buffer" },
@@ -28,6 +28,5 @@ gs.setup {
 			},
 			{ prefix = '<leader>' }
 		)
-
 	end
 }
