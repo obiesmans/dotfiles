@@ -68,4 +68,7 @@ return require('packer').startup(function(use)
 		"lewis6991/gitsigns.nvim"
 	}
 
+	use {
+		"voldikss/vim-floaterm"
+	}
 end)
