@@ -1,4 +1,6 @@
 require('packages')
+require('lsp-diagnostics')
+require('git') -- git integration
 
 --
 -- Options
@@ -53,17 +55,3 @@ vim.api.nvim_create_autocmd(
 	{ "TermOpen" },
 	{ pattern = "term://*", command = 'startinsert' }
 )
-
-
-
--- git
-local wk = require('which-key')
-wk.register({
-	g = {
-		name = 'git',
-		s = {
-			':FloatermNew --autoclose=1 --title=tig tig status<cr>',
-			'tig status'
-		},
-	}
-}, { prefix = '<leader>' })

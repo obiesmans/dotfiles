@@ -1,3 +1,26 @@
+--
+-- Mappings
+--
+local wk = require('which-key')
+
+-- git
+wk.register(
+	{
+		g = {
+			name = 'Git',
+			s = {
+				':FloatermNew --autoclose=1 --title=tig tig status<cr>',
+				'tig status'
+			},
+		}
+	},
+	{ prefix = '<leader>' }
+)
+
+
+--
+-- gitsigns
+--
 local gs = require('gitsigns')
 
 gs.setup {
@@ -7,8 +30,6 @@ gs.setup {
 	current_line_blame_opts = {
 	},
 	on_attach = function()
-		-- local gs = package.loaded.gitsigns
-		local wk = require('which-key')
 		wk.register(
 			{
 				g = {
@@ -26,7 +47,9 @@ gs.setup {
 					},
 				}
 			},
-			{ prefix = '<leader>' }
+			{
+				prefix = '<leader>',
+			}
 		)
 	end
 }
