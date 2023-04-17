@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
 		requires = {
 			"hrsh7th/cmp-nvim-lsp",
 			{ "hrsh7th/cmp-buffer", opt = true },
-			{ "hrsh7th/cmp-path", opt = true },
+			{ "hrsh7th/cmp-path",   opt = true },
 		}
 	}
 
@@ -70,5 +70,14 @@ return require('packer').startup(function(use)
 
 	use {
 		"voldikss/vim-floaterm"
+	}
+
+	use {
+		'phaazon/mind.nvim',
+		branch = 'v2.2',
+		requires = { 'nvim-lua/plenary.nvim' },
+		config = function()
+			require 'mind'.setup()
+		end
 	}
 end)
